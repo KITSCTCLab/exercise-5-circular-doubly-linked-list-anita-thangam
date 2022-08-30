@@ -26,8 +26,7 @@ class DoublyCircularLinkedList:
         # Write code here
 
     def get_previous_next(self, index) -> list:
-        # Write code here
-
+       # Write code here
 
 # Do not change the following code
 operations = []
@@ -35,7 +34,7 @@ for specific_operation in input().split(','):
     operations.append(specific_operation.strip())
 input_data = input()
 data = []
-iterationcount = 0
+iteration_count = 0
 
 for item in input_data.split(', '):
     inner_list = []
