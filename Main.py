@@ -12,21 +12,75 @@ class DoublyCircularLinkedList:
 
     def add_at_tail(self, data) -> bool:
         # Write code here
-
+        temp = Node()
+        temp.data = data
+        temp.prev = end
+        temp.next = NULL
+        if end == NULL:
+            front = temp
+        else:
+            end.next = temp
+        end = temp
+        if end==temp:
+            return True
+        else:
+            return False
     def add_at_head(self, data) -> bool:
         # Write code here
-
+        temp=Node()
+        temp.data=data
+        temp.previous=NULL
+        temp.next=front
+        if front==NULL:
+            end=temp
+        else:
+            front.previous=temp
+        front=temp
+        if front==temp:
+            return True
+        else:
+            return False
     def add_at_index(self, index, data) -> bool:
         # Write code here
-
+        temp=Node()
+        temp.data=data
+        temp.previous=index
+        temp.next=index.next
+        index.next=temp
+        if index.next==NULL:
+            end=temp
+        if end==temp:
+            return True
+        else:
+            return False
+        
     def get(self, index) -> int:
         # Write code here
-
+        return index.data
+        
     def delete_at_index(self, index) -> bool:
         # Write code here
-
+        temp=Node()
+        if index.previous==NULL:
+            front=index.next
+            front.previous=NULL
+        elif index.next==NULL:
+            end=index.previous
+            end.next=NULL
+        else:
+            index.previous.next=index.next
+            index.next.previous=index.previous
+        temp.remove(index)
+        if index.previous!=NULL:
+            return True
+        else:
+            return False
     def get_previous_next(self, index) -> list:
-       # Write code here
+        # Write code here
+        index=front
+        while(index!=NULL):
+            return index.data
+            index=index.next
 
 # Do not change the following code
 operations = []
@@ -64,4 +118,3 @@ for i in range(len(operations)):
         result.append(obj.delete_at_index(data[i]))
 
 print(result)
-
