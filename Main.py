@@ -44,7 +44,7 @@ for item in input_data.split(', '):
     elif item.startswith('['):
         item = item[1:-1]
         for letter in item.split(','):
-            if letter.isnumeric():
+            if letter.isnumeric()
                 inner_list.append(int(letter))
         data.append(inner_list)
 
@@ -64,4 +64,4 @@ for i in range(len(operations)):
     elif operations[i] == 'delete_at_index':
         result.append(obj.delete_at_index(data[i]))
 
-print(result
+print(result)
