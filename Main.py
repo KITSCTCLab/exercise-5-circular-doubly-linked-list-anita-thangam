@@ -35,7 +35,7 @@ for specific_operation in input().split(','):
     operations.append(specific_operation.strip())
 input_data = input()
 data = []
-iteration_count = 0
+iterationcount = 0
 
 for item in input_data.split(', '):
     inner_list = []
@@ -44,7 +44,7 @@ for item in input_data.split(', '):
     elif item.startswith('['):
         item = item[1:-1]
         for letter in item.split(','):
-            if letter.isnumeric()
+            if letter.isnumeric():
                 inner_list.append(int(letter))
         data.append(inner_list)
 
